@@ -1,0 +1,7 @@
+html
+  head
+    title= title
+  body
+      form(action=`/edit/${todo.id}` method="post")
+        input(type="text" name="todo" value=todo.todo)
+        input(type="submit" value="Edit")

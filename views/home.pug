@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+      form(action="/" method="post")
+        input(type="text" name="name")
+        input(type="submit" value="Create")
+      ul
+        each arr in todo
+          li
+            span= arr.todo
+            form(action=`delete/${arr.id}` method="get")
+              input(type="submit" value="delete")
+            form(action=`edit/${arr.id}` method="get")
+              input(type="submit" value="Edit")
+
